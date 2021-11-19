@@ -14,13 +14,13 @@ export const fetchContactsSuccess = createAction(
 export const fetchContactsError = createAction("Contact/fetchContactsError");
 
 export const addContactRequest = createAction("Contact/addContactRequest");
-export const addContactuccess = createAction("Contact/addContactuccess");
+export const addContactSuccess = createAction("Contact/addContactuccess");
 export const addContactError = createAction("Contact/addContactError");
 
 export const deleteContactRequest = createAction(
   "Contact/deleteContactRequest"
 );
-export const deleteContactuccess = createAction("Contact/deleteContactuccess");
+export const deleteContactSuccess = createAction("Contact/deleteContactuccess");
 export const deleteContactError = createAction("Contact/deleteContactError");
 
 export const changeFilter = createAction("Contact/changeFilter");

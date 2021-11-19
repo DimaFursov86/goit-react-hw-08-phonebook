@@ -1,7 +1,7 @@
 import { useState } from "react";
 import s from "./ContactForm.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import * as appOperations from "../redux/contacts/app-Operations";
+import { addContact } from "../../redux/app/app-operations";
 import Loader from "../Loader/Loader";
 import toast, { Toaster } from "react-hot-toast";
 import { getVisibleContacts } from "../../redux/app/app-selectors";
@@ -39,7 +39,7 @@ export default function Form({ onSubmit }) {
     if (existName.includes(name)) {
       toast.error(`${name} is already in contacts`);
     } else {
-      dispatch(appOperations.addContact({ name, number }));
+      dispatch(addContact({ name, number }));
       toast.success(`${name} was added`);
     }
     // const value = name;

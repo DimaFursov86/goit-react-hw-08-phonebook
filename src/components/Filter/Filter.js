@@ -1,8 +1,8 @@
 import React from "react";
 import s from "./Filter.module.scss";
 import { useSelector, useDispatch } from "react-redux";
-import actions from "../../redux/app/app-actions";
-import { getFilter } from "../../redux/app/app-selectors";
+import { changeFilter } from "../../redux/app/app-actions";
+import { getFilter } from "../../redux/app";
 
 const Filter = () => {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ const Filter = () => {
       <input
         type="text"
         value={value}
-        onChange={(e) => dispatch(actions.changeFilter(e.currentTarget.value))}
+        onChange={(e) => dispatch(changeFilter(e.currentTarget.value))}
       />
     </label>
   );

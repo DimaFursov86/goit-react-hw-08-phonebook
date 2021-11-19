@@ -2,7 +2,7 @@ import s from "./ContactItem.module.scss";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import Loader from "../Loader/Loader";
-import * as appOperations from "../../redux/app/app-operations";
+import * as contactsOperations from "../../redux/app/app-operations";
 import { deleteContactRequest } from "../../redux/app/app-actions";
 export default function ContactItem({ id, name, number }) {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ export default function ContactItem({ id, name, number }) {
         type="button"
         disabled={deleteContactRequest}
         className={s.contactItemTextB}
-        onClick={() => dispatch(appOperations.deleteContact(id))}
+        onClick={() => dispatch(contactsOperations.deleteContact(id))}
       >
         {deleteContactRequest ? <Loader /> : "Delete"}
       </button>
