@@ -6,6 +6,7 @@ import Container from "./components/Container";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import PublicRoute from "./components/PublicRoute/PublicRoute";
 import { authOperations, authSelectors } from "./redux/auth";
+import Loader from "./components/Loader/Loader";
 
 const HomeView = lazy(() => import("./views/HomeView"));
 const RegisterView = lazy(() => import("./views/RegisterView"));
@@ -29,7 +30,7 @@ export default function App() {
         <>
           <AppBar />
           <Switch>
-            <Suspense fallback={<p>Загружаем...</p>}>
+            <Suspense fallback={<Loader />}>
               <PublicRoute exact path="/">
                 <HomeView />
               </PublicRoute>
