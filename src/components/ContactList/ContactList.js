@@ -1,10 +1,10 @@
 import s from "./ContactList.module.scss";
 import ContactItem from "../ContactItem";
 import { useSelector } from "react-redux";
-import { getVisibleContacts } from "../../redux/app/app-selectors";
+import ContactsSelectors from "../../redux/app/app-selectors";
 import { fetchContactsSuccess } from "../../redux/app/app-actions";
 export default function ContactList() {
-  const getVcontacts = useSelector(getVisibleContacts);
+  const getVcontacts = useSelector(ContactsSelectors.getVisibleContacts);
 
   return (
     <ul className={s.contactList}>

@@ -1,10 +1,10 @@
 import { createSelector } from "@reduxjs/toolkit";
 
-const getLoading = (state) => state.Contacts.loading;
+const getLoading = (state) => state.contacts.loading;
 
-const getFilter = (state) => state.Contacts.filter;
+const getFilter = (state) => state.contacts.filter;
 
-const getAllContacts = (state) => state.Contacts.items;
+const getAllContacts = (state) => state.contacts.contacts;
 
 const getTotalContactCount = (state) => {
   const Contacts = getAllContacts(state);
@@ -13,9 +13,9 @@ const getTotalContactCount = (state) => {
 
 const getVisibleContacts = createSelector(
   [getAllContacts, getFilter],
-  (Contacts, filter) => {
+  (contacts, filter) => {
     const normalizedFilter = filter.toLowerCase();
-    return Contacts.filter(({ name }) =>
+    return contacts.filter(({ name }) =>
       name.toLowerCase().includes(normalizedFilter)
     );
   }

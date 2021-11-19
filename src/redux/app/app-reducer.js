@@ -13,7 +13,7 @@ import {
   fetchContactsError,
 } from "./app-actions";
 
-const items = createReducer([], {
+const contacts = createReducer([], {
   [fetchContactsSuccess]: (_, { payload }) => payload,
   [addContactSuccess]: (state, { payload }) => [...state, payload],
   [deleteContactSuccess]: (state, { payload }) =>
@@ -39,7 +39,7 @@ const filter = createReducer("", {
 const error = createReducer(null, {});
 
 export default combineReducers({
-  items,
+  contacts,
   filter,
   loading,
   error,

@@ -21,7 +21,7 @@ const Navigation = () => {
   return (
     <nav>
       <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
-        Главная
+        Homepage
       </NavLink>
 
       {isLoggedIn && (
@@ -34,14 +34,14 @@ const Navigation = () => {
           >
             Contacts
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/upload"
             exact
             style={styles.link}
             activeStyle={styles.activeLink}
           >
             Загрузить
-          </NavLink>
+          </NavLink> */}
         </>
       )}
     </nav>
