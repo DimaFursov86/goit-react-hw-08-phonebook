@@ -11,6 +11,7 @@ const Filter = () => {
     <label className={s.filterBox}>
       Find contacts by name
       <input
+        className={s.inputStyle}
         type="text"
         value={value}
         onChange={(e) => dispatch(changeFilter(e.currentTarget.value))}

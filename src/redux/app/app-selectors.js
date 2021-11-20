@@ -1,4 +1,5 @@
 import { createSelector } from "@reduxjs/toolkit";
+const getLoadingAdd = (state) => state.contacts.loadingAdd;
 
 const getLoading = (state) => state.contacts.loading;
 
@@ -26,5 +27,6 @@ const ContactsSelectors = {
   getFilter,
   getVisibleContacts,
   getTotalContactCount,
+  getLoadingAdd,
 };
 export default ContactsSelectors;

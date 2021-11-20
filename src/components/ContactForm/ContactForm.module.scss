@@ -9,6 +9,8 @@
   font-weight: 600;
 }
 .formButton {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   margin-top: 20px;
   height: 40px;
   border-radius: 4px;
@@ -16,8 +18,26 @@
   cursor: pointer;
   border: none;
   transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-image: radial-gradient(
+    at center,
+    rgb(200, 240, 126) 40%,
+    rgba(86, 207, 201, 0.74) 80%
+  );
   &:hover {
     transform: scale(1.05);
-    background-color: rgb(200, 240, 126);
+    background-image: radial-gradient(
+      at center,
+      rgb(200, 240, 126) 10%,
+      rgba(86, 207, 201, 0.74) 80%
+    );
+  }
+}
+.inputStyle {
+  border-color: rgb(48, 172, 100);
+
+  border-radius: 4px;
+  height: 35px;
+  &:hover {
+    border-color: aqua;
   }
 }

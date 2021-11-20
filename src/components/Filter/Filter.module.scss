@@ -3,3 +3,12 @@
   flex-direction: column;
   font-weight: 600;
 }
+.inputStyle {
+  border-color: rgb(48, 172, 100);
+
+  border-radius: 4px;
+  height: 35px;
+  &:hover {
+    border-color: aqua;
+  }
+}

@@ -24,12 +24,17 @@ const loading = createReducer(false, {
   [fetchContactsRequest]: () => true,
   [fetchContactsSuccess]: () => false,
   [fetchContactsError]: () => false,
-  [addContactRequest]: () => true,
-  [addContactSuccess]: () => false,
-  [addContactError]: () => false,
+  // [addContactRequest]: () => true,
+  // [addContactSuccess]: () => false,
+  // [addContactError]: () => false,
   [deleteContactRequest]: () => true,
   [deleteContactSuccess]: () => false,
   [deleteContactError]: () => false,
+});
+const loadingAdd = createReducer(false, {
+  [addContactRequest]: () => true,
+  [addContactSuccess]: () => false,
+  [addContactError]: () => false,
 });
 
 const filter = createReducer("", {
@@ -43,4 +48,5 @@ export default combineReducers({
   filter,
   loading,
   error,
+  loadingAdd,
 });
