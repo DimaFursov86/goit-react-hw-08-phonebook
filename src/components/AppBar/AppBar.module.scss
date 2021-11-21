@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #2a363b;
+  background-image: linear-gradient(
+    to right,
+    #00b9ff 10%,
+    #09792b 50%,
+    #00b9ff 90%
+  );
+}

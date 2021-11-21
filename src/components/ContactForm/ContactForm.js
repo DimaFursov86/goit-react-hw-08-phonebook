@@ -3,10 +3,8 @@ import s from "./ContactForm.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import ContactsOperations from "../../redux/app/app-operations";
 import Loader from "../Loader/Loader";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import ContactsSelectors from "../../redux/app/app-selectors";
-
-// import { getAllContacts } from '../../redux/app/app-selectors';
 
 export default function Form({ onSubmit }) {
   const [name, setName] = useState("");
@@ -14,9 +12,6 @@ export default function Form({ onSubmit }) {
 
   const dispatch = useDispatch();
   const loading = useSelector(ContactsSelectors.getLoadingAdd);
-  // const contacts = useSelector(getAllContacts);
-
-  console.log(loading);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -46,21 +41,6 @@ export default function Form({ onSubmit }) {
       dispatch(ContactsOperations.addContact({ name, number }));
       toast.success(`${name} was added`);
     }
-
-    // const value = name;
-    // if (contacts) {
-    //   const getVcontacts = contacts.filter(({ name }) =>
-    //     name.toLowerCase().includes(value.toLowerCase())
-    //   );
-    //   const existName = getVcontacts.map((obj) => obj.name);
-    //   if (existName.includes(value)) {
-    //     toast.error(`${value} is already in contacts`);
-    //   } else {
-    //     createContact(e.currentTarget.elements.name.value);
-    //     toast.success(`${value} was added`);
-    //   }
-    // }
-
     setName("");
     setNumber("");
   };
@@ -94,7 +74,7 @@ export default function Form({ onSubmit }) {
           required
         />
       </label>
-      <Toaster />
+
       <button className={s.formButton} type="submit" disabled={loading}>
         {loading ? <Loader /> : "Add contact"}
       </button>

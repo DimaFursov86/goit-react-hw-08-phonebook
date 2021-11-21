@@ -23,7 +23,7 @@ export default function AuthNav() {
         style={styles.link}
         activeStyle={styles.activeLink}
       >
-        Register
+        SignUp
       </NavLink>
       <NavLink
         to="/login"

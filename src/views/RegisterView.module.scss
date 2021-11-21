@@ -1,0 +1,47 @@
+.formReg {
+  width: 320px;
+  background-color: blue;
+  background-image: linear-gradient(
+    to top left,
+    rgb(85, 85, 219),
+    rgb(0, 255, 170)
+  );
+  padding: 10px;
+  border-radius: 4%;
+}
+.labelReg {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.inputStyle {
+  border-color: rgb(48, 172, 100);
+
+  border-radius: 4px;
+  height: 35px;
+  &:hover {
+    border-color: aqua;
+  }
+}
+.Box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.buttonStyle {
+  width: 100%;
+  padding: 5px;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  background-color: rgb(76, 205, 50);
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    transform: scale(1.02);
+    background-color: rgb(10, 100, 32);
+  }
+}
